@@ -1,0 +1,232 @@
+--- !ruby/object:Gem::Specification
+name: jenkins-plugin-runtime
+version: !ruby/object:Gem::Version
+  version: 0.2.4
+platform: ruby
+authors:
+- Charles Lowell
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2017-04-24 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: json
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: slop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ~>
+      - !ruby/object:Gem::Version
+        version: 3.0.2
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ~>
+      - !ruby/object:Gem::Version
+        version: 3.0.2
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ~>
+      - !ruby/object:Gem::Version
+        version: 2.14.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ~>
+      - !ruby/object:Gem::Version
+        version: 2.14.1
+- !ruby/object:Gem::Dependency
+  name: jenkins-war
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>'
+      - !ruby/object:Gem::Version
+        version: '1.445'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>'
+      - !ruby/object:Gem::Version
+        version: '1.445'
+description: I'll think of a better description later, but if you're reading this,
+  then I haven't
+email:
+- cowboyd@thefrontside.net
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- Gemfile
+- README.md
+- Rakefile
+- jenkins-plugin-runtime.gemspec
+- lib/core_ext/exception.rb
+- lib/jenkins/cli.rb
+- lib/jenkins/cli/command.rb
+- lib/jenkins/cli/command_proxy.rb
+- lib/jenkins/extension.rb
+- lib/jenkins/filepath.rb
+- lib/jenkins/launcher.rb
+- lib/jenkins/listeners.rb
+- lib/jenkins/listeners/item_listener.rb
+- lib/jenkins/listeners/item_listener_proxy.rb
+- lib/jenkins/listeners/run_listener.rb
+- lib/jenkins/listeners/run_listener_proxy.rb
+- lib/jenkins/model.rb
+- lib/jenkins/model/action.rb
+- lib/jenkins/model/action_proxy.rb
+- lib/jenkins/model/build.rb
+- lib/jenkins/model/describable.rb
+- lib/jenkins/model/describable_native.rb
+- lib/jenkins/model/describable_proxy.rb
+- lib/jenkins/model/descriptor.rb
+- lib/jenkins/model/environment.rb
+- lib/jenkins/model/environment_proxy.rb
+- lib/jenkins/model/global_descriptor.rb
+- lib/jenkins/model/listener.rb
+- lib/jenkins/model/root_action.rb
+- lib/jenkins/model/root_action_proxy.rb
+- lib/jenkins/model/unprotected_root_action.rb
+- lib/jenkins/model/unprotected_root_action_proxy.rb
+- lib/jenkins/plugin.rb
+- lib/jenkins/plugin/behavior.rb
+- lib/jenkins/plugin/proxies.rb
+- lib/jenkins/plugin/proxy.rb
+- lib/jenkins/plugin/runtime.rb
+- lib/jenkins/plugin/runtime/version.rb
+- lib/jenkins/plugin/specification.rb
+- lib/jenkins/plugin/wrapper.rb
+- lib/jenkins/rack.rb
+- lib/jenkins/slaves.rb
+- lib/jenkins/slaves/cloud.rb
+- lib/jenkins/slaves/computer_listener.rb
+- lib/jenkins/slaves/computer_listener_proxy.rb
+- lib/jenkins/slaves/node_property.rb
+- lib/jenkins/slaves/node_property_proxy.rb
+- lib/jenkins/tasks.rb
+- lib/jenkins/tasks/build_step.rb
+- lib/jenkins/tasks/build_step_proxy.rb
+- lib/jenkins/tasks/build_wrapper.rb
+- lib/jenkins/tasks/build_wrapper_proxy.rb
+- lib/jenkins/tasks/builder.rb
+- lib/jenkins/tasks/builder_proxy.rb
+- lib/jenkins/tasks/publisher.rb
+- lib/jenkins/tasks/publisher_proxy.rb
+- lib/jenkins/triggers.rb
+- lib/jenkins/triggers/trigger.rb
+- lib/jenkins/triggers/trigger_descriptor.rb
+- lib/jenkins/triggers/trigger_proxy.rb
+- spec/jenkins/cli/command_proxy_spec.rb
+- spec/jenkins/cli/command_spec.rb
+- spec/jenkins/extension_spec.rb
+- spec/jenkins/filepath_spec.rb
+- spec/jenkins/launcher_spec.rb
+- spec/jenkins/listeners/item_listener_proxy_spec.rb
+- spec/jenkins/listeners/run_listener_proxy_spec.rb
+- spec/jenkins/model/action_spec.rb
+- spec/jenkins/model/build_spec.rb
+- spec/jenkins/model/describable_spec.rb
+- spec/jenkins/model/listener_spec.rb
+- spec/jenkins/model/root_action_proxy_spec.rb
+- spec/jenkins/model_spec.rb
+- spec/jenkins/plugin/behavior_spec.rb
+- spec/jenkins/plugin/example.pluginspec
+- spec/jenkins/plugin/proxies/proxy_helper.rb
+- spec/jenkins/plugin/proxies_spec.rb
+- spec/jenkins/plugin/proxy_spec.rb
+- spec/jenkins/plugin/specification_spec.rb
+- spec/jenkins/plugin_spec.rb
+- spec/jenkins/tasks/build_wrapper_proxy_spec.rb
+- spec/jenkins/tasks/build_wrapper_spec.rb
+- spec/jenkins/tasks/builder_proxy_spec.rb
+- spec/jenkins/tasks/builder_spec.rb
+- spec/jenkins/tasks/publisher_proxy_spec.rb
+- spec/jenkins/triggers/trigger_proxy_spec.rb
+- spec/jenkins/triggers/trigger_spec.rb
+- spec/spec_helper.rb
+- src/jenkins/ruby/DoDynamic.java
+- src/jenkins/ruby/Get.java
+homepage: https://github.com/jenkinsci/jenkins.rb/tree/master/ruby-runtime
+licenses: []
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: jenkins-plugin-runtime
+rubygems_version: 2.0.14.1
+signing_key: 
+specification_version: 4
+summary: Runtime support libraries for Jenkins Ruby plugins
+test_files:
+- spec/jenkins/cli/command_proxy_spec.rb
+- spec/jenkins/cli/command_spec.rb
+- spec/jenkins/extension_spec.rb
+- spec/jenkins/filepath_spec.rb
+- spec/jenkins/launcher_spec.rb
+- spec/jenkins/listeners/item_listener_proxy_spec.rb
+- spec/jenkins/listeners/run_listener_proxy_spec.rb
+- spec/jenkins/model/action_spec.rb
+- spec/jenkins/model/build_spec.rb
+- spec/jenkins/model/describable_spec.rb
+- spec/jenkins/model/listener_spec.rb
+- spec/jenkins/model/root_action_proxy_spec.rb
+- spec/jenkins/model_spec.rb
+- spec/jenkins/plugin/behavior_spec.rb
+- spec/jenkins/plugin/example.pluginspec
+- spec/jenkins/plugin/proxies/proxy_helper.rb
+- spec/jenkins/plugin/proxies_spec.rb
+- spec/jenkins/plugin/proxy_spec.rb
+- spec/jenkins/plugin/specification_spec.rb
+- spec/jenkins/plugin_spec.rb
+- spec/jenkins/tasks/build_wrapper_proxy_spec.rb
+- spec/jenkins/tasks/build_wrapper_spec.rb
+- spec/jenkins/tasks/builder_proxy_spec.rb
+- spec/jenkins/tasks/builder_spec.rb
+- spec/jenkins/tasks/publisher_proxy_spec.rb
+- spec/jenkins/triggers/trigger_proxy_spec.rb
+- spec/jenkins/triggers/trigger_spec.rb
+- spec/spec_helper.rb
