@@ -1,7 +1,7 @@
 module Jenkins
   class Plugin
     module Runtime
-      VERSION = "0.2.4.pre.6"
+      VERSION = "0.2.4"
     end
   end
 end
